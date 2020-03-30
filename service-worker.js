@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/babylonjs-directed-graph/precache-manifest.c7567af13272f594eac90e67259f5515.js"
+  "/babylonjs-directed-graph/precache-manifest.9c664250c6dda37256af03c97883f1c7.js"
 );
 
 self.addEventListener('message', (event) => {
