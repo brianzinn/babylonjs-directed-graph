@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a92560e10b0f17f9e63dc093c61d124b",
+    "revision": "7583e56780f444677fd0003507770ed8",
     "url": "/babylonjs-directed-graph/index.html"
   },
   {
-    "revision": "0487b5c6a33a072a0c6f",
+    "revision": "64f0aa3adef5be266ccb",
     "url": "/babylonjs-directed-graph/static/css/main.2831fc48.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/babylonjs-directed-graph/static/js/2.75e4624a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0487b5c6a33a072a0c6f",
-    "url": "/babylonjs-directed-graph/static/js/main.6e6f3d89.chunk.js"
+    "revision": "64f0aa3adef5be266ccb",
+    "url": "/babylonjs-directed-graph/static/js/main.2d98c061.chunk.js"
   },
   {
     "revision": "d135baa9660aafee9e23",
