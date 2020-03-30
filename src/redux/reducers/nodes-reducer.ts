@@ -71,8 +71,18 @@ const initialNodes: Node[] = [{
     dependsOn: [{
         id: 1,
         nodeId: 2,
-        nodeName: 'Flat',
-        description: 'bank to flat'
+        nodeName: '-',
+        description: 'future-use'
+    }, {
+        id: 2,
+        nodeId: 3,
+        nodeName: '--',
+        description: 'future-use'
+    }, {
+        id: 3,
+        nodeId: 4,
+        nodeName: '--',
+        description: 'future-use'
     }],
     dependenceFor: []
 }, {
@@ -80,22 +90,47 @@ const initialNodes: Node[] = [{
     fileName: 'Flat.obj',
     healthPercent: 100,
     id: 2,
-    dependsOn: [],
-    dependenceFor: []
+    dependsOn: [{
+        id: 4,
+        nodeId: 3,
+        nodeName: '--',
+        description: 'future-use'
+    }],
+    dependenceFor: [{
+        id: 1,
+        nodeId: 1,
+        nodeName: '--',
+        description: 'future-use'
+    }]
 }, {
     name: 'Flat 2',
     fileName: 'Flat2.obj',
     healthPercent: 100,
     id: 3,
     dependsOn: [],
-    dependenceFor: []
+    dependenceFor: [{
+        id: 2,
+        nodeId: 1,
+        nodeName: '--',
+        description: 'future-use'
+    }, {
+        id: 4,
+        nodeId: 2,
+        nodeName: '--',
+        description: 'future-use'
+    }]
 }, {
     name: 'Hospital',
     fileName: 'Hospital.obj',
     healthPercent: 100,
     id: 4,
     dependsOn: [],
-    dependenceFor: []
+    dependenceFor: [{
+        id: 3,
+        nodeId: 1,
+        nodeName: '--',
+        description: 'future-use'
+    }]
 }, {
     name: 'House',
     fileName: 'House.obj',
@@ -146,7 +181,22 @@ const initialState: NodeState = {
         id: 1,
         fromNodeId: 1,
         toNodeId: 2,
-        description: 'bank to flat'
+        description: 'edge-name-future-use'
+    }, {
+        id: 2,
+        fromNodeId: 1,
+        toNodeId: 3,
+        description: 'edge-name-future-use'
+    }, {
+        id: 3,
+        fromNodeId: 1,
+        toNodeId: 4,
+        description: 'edge-name-future-use'
+    }, {
+        id: 4,
+        fromNodeId: 2,
+        toNodeId: 3,
+        description: 'edge-name-future-use'
     }],
     selectedNodeId: 1,
     selectedNodeGraph: getNodeGraph(1, initialNodes)

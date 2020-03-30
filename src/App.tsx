@@ -100,13 +100,13 @@ const App: React.FC<ComponentProps> = ({ getNodes, selectNode, addNode, addNodeD
           <Engine antialias={true} adaptToDeviceRatio={true} canvasId="sample-canvas">
             <Scene>
               <arcRotateCamera name="arc" target={ new Vector3(0, 1, 0) }
-                    alpha={-Math.PI / 2} beta={(0.5 + (Math.PI / 4))}
-                    radius={4} minZ={0.001} wheelPrecision={50} 
+                    alpha={-Math.PI / 2} beta={Math.PI / 4}
+                    radius={8} minZ={0.001} wheelPrecision={50} 
                     lowerRadiusLimit={0.1} upperRadiusLimit={20} upperBetaLimit={Math.PI / 2} />
               <hemisphericLight name='hemi' direction={new Vector3(0, -1, 0)} intensity={0.6} />
               <directionalLight name="shadow-light" setDirectionToTarget={[Vector3.Zero()]} direction={Vector3.Zero()} position = {new Vector3(-40, 30, -40)}
                 intensity={0.05} shadowMinZ={1} shadowMaxZ={2500}>
-                <shadowGenerator mapSize={1024} useBlurExponentialShadowMap={false} blurKernel={32}
+                <shadowGenerator mapSize={1024} useBlurExponentialShadowMap={false} blurKernel={32} darkness={0.6}
                   shadowCastersExcluding={['ground', 'gazeTracker', 'BackgroundHelper', 'BackgroundPlane', 'BackgroundSkybox']} forceBackFacesOnly={true} depthScale={100} />
               </directionalLight>
               {selectedNodeGraph && selectedNodeGraph.nodes.map((s: GraphNode) =>
@@ -117,7 +117,14 @@ const App: React.FC<ComponentProps> = ({ getNodes, selectNode, addNode, addNodeD
                       </box>
                     }
                     {(s.node?.fileName !== undefined) &&
-                      <model key={`model-${s.nodeId}`} rootUrl='/assets/quaternius_buildings/' sceneFilename={s.node?.fileName} scaleToDimension={1} position={s.position} />
+                      <model
+                        key={`model-${s.nodeId}`}
+                        rootUrl={process.env.PUBLIC_URL + '/assets/quaternius_buildings/'}
+                        sceneFilename={s.node?.fileName}
+                        scaleToDimension={1}
+                        position={s.position}
+                        rotation={new Vector3(0, Math.PI, 0)}
+                      />
                     }
                     <plane key={`plane-${s.nodeId}`} name="dialog" size={2} position={s.position.add(new Vector3(0, 1.25, 0))}>
                       <advancedDynamicTexture name="dialogTexture" height={1024} width={1024}
