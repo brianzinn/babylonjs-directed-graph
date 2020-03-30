@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/babylonjs-directed-graph/static/css/main.2831fc48.chunk.css",
+    "main.js": "/babylonjs-directed-graph/static/js/main.9f81cafb.chunk.js",
+    "main.js.map": "/babylonjs-directed-graph/static/js/main.9f81cafb.chunk.js.map",
+    "runtime-main.js": "/babylonjs-directed-graph/static/js/runtime-main.33876505.js",
+    "runtime-main.js.map": "/babylonjs-directed-graph/static/js/runtime-main.33876505.js.map",
+    "static/js/2.75e4624a.chunk.js": "/babylonjs-directed-graph/static/js/2.75e4624a.chunk.js",
+    "static/js/2.75e4624a.chunk.js.map": "/babylonjs-directed-graph/static/js/2.75e4624a.chunk.js.map",
+    "index.html": "/babylonjs-directed-graph/index.html",
+    "precache-manifest.1faa35330123a34f6acec38bdf129363.js": "/babylonjs-directed-graph/precache-manifest.1faa35330123a34f6acec38bdf129363.js",
+    "service-worker.js": "/babylonjs-directed-graph/service-worker.js",
+    "static/css/main.2831fc48.chunk.css.map": "/babylonjs-directed-graph/static/css/main.2831fc48.chunk.css.map",
+    "static/js/2.75e4624a.chunk.js.LICENSE.txt": "/babylonjs-directed-graph/static/js/2.75e4624a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33876505.js",
+    "static/js/2.75e4624a.chunk.js",
+    "static/css/main.2831fc48.chunk.css",
+    "static/js/main.9f81cafb.chunk.js"
+  ]
+}
